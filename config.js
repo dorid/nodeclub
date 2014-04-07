@@ -34,7 +34,7 @@ var config = {
   db: 'mongodb://127.0.0.1/node_club_dev',
   session_secret: 'node_club',
   auth_cookie_name: 'node_club',
-  port: 3000,
+  port: 3001,
 
   // 话题列表显示的话题数量
   list_topic_count: 20,
