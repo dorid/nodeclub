@@ -727,8 +727,8 @@ div[class$=content] > blockquote > p {
   padding: 2px;
 }
 .inner ol {
-  margin: 4px 0px;
-  list-style: none;
+  margin: 4px 0px 0px 30px;
+  /*list-style: none;*/
 }
 .top_score {
   margin-right: 10px;

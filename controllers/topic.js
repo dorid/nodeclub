@@ -112,6 +112,7 @@ exports.put = function (req, res, next) {
   var title = sanitize(req.body.title).trim();
   title = sanitize(title).xss();
   var content = req.body.t_content;
+    console.log(content);
   var topic_tags = [];
   if (req.body.topic_tags !== '') {
     topic_tags = req.body.topic_tags.split(',');

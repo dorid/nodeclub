@@ -96,9 +96,9 @@
       <% } %>
     </div>
     <div class='inner topic'>
-
       <div class='topic_content'>
-        <%- markdown(topic.content) %>
+        <!--<%- markdown(topic.content) %>-->
+          <%- topic.content %>
       </div>
       <% if (topic.tags.length > 0) { %>
         <div class="tags">
@@ -166,8 +166,11 @@
 <!-- markdown editor -->
 <%- Loader('/public/topic_edit.min.js')
   .js('/public/libs/ajax-upload/ajaxupload.js')
-  .js('/public/libs/marked.js')
-  .js('/public/javascripts/markdown_editor.js')
+  <!--.js('/public/libs/marked.js')-->
+  <!--.js('/public/javascripts/markdown_editor.js')-->
+
+.js('/public/kindeditor/kindeditor-min.js')
+.js('/public/kindeditor/lang/zh_CN.js')
   .done(assets, config.site_static_host, config.mini_assets)
 %>
 <script>
@@ -274,6 +277,17 @@
         }
       });
     });
+
+     /* var editor;
+      KindEditor.ready(function(K) {
+          editor = K.create('div[class="topic_content"]', {
+              allowImageUpload : false,
+              items : [
+                  'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                  'underline', 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                  'insertorderedlist', 'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+          });
+      });*/
   });
 </script>
 <% } %>
